@@ -90,6 +90,11 @@ SELECT * FROM pets ORDER BY column_heading1 DSC;
 UPDATE table_heading SET column_heading2 = 5 WHERE column_heading3 = 1;
 ```
 
+##### Delete table data
+```
+DELETE FROM table_heading WHERE _id = <id_you_want_to_delete>;
+```
+
 ##### Delete table
 ```
 DROP TABLE table_heading;
