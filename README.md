@@ -85,6 +85,11 @@ SELECT * FROM pets ORDER BY column_heading1 DSC;
 .mode list
 ```
 
+##### Edit/Update table
+```
+UPDATE table_heading SET column_heading2 = 5 WHERE column_heading3 = 1;
+```
+
 ##### Delete table
 ```
 DROP TABLE table_heading;
