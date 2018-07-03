@@ -5,68 +5,79 @@
 - dot commands are case sensitive.
 - Primary Key: Ensures uniqueness. There can only be one primary key per table.
 - Auto Increment: Automatically calculates new integer when row is added for IDs.
+- NOT NULL - Null values are not allowed for this column.
+- Default<value> - When inserting a new row, if no value is defined, the default value given will be used.
 
-##### OPEN SQLITE3
+##### Open Sqlite3
 ```
 sqlite3
 ```
 
-##### FOR HELP
+##### Help
 ```
 .help
 ```
 
-##### CREATE/OPEN NEW FILE
+##### Create/Open new file
 ```
 .open your_db_name.db
 ```
 
-##### CHECK IF SQLITE HAS ANY TABLES
+##### Check if table exists or not
 ```
 .tables
 ```
 
-##### CREATE TABLE WITH PRIMARY KEY
+##### Create table with primary key
 ```
 CREATE TABLE table_heading(_id INTEGER PRIMARY KEY AUTOINCREMENT, column_heading1 TEXT, column_heading2 INTEGER, column_heading3 INTEGER, column_heading4 TEXT);
 ```
-##### CREATE TABLE
+##### Create table
 ```
 CREATE TABLE table_heading(_id INTEGER, column_heading1 TEXT, column_heading2 INTEGER, column_heading3 INTEGER, column_heading4 TEXT);
 ```
 
-##### HEADER ON
+##### Header on
 ```
 .header on
 ```
 
-##### CREATE TABLE
+##### Schema used to create table
 ```
 .schema table_heading
 ```
 
-##### PRINT HEADINGS OF COLUMN
+##### Print column headings
 ```
 PRAGMA TABLE_INFO(table_heading);
 ```
 
-##### INSERT INFO IN TABLE
+##### Insert information in table
 ```
 INSERT INTO table_heading(_id, column_heading1, column_heading2, column_heading3, column_heading4)
     VALUES (1, "TABLE1", 89, 5, "HEAD1");
 ```
 
-##### READING SINGLE COLUMN FROM TABLE
+##### Reading single column from table
 ```
 SELECT column_heading1 FROM table_heading;
 ```
 
-##### READING EVERYTHING FROM TABLE
+##### Reading everything from table
 ```
 SELECT * FROM table_heading;
 ```
 
-##### READING MODES
+##### Reading methods
+```
+SELECT * FROM table_heading WHERE _id == 1;
+SELECT * FROM table_heading WHERE column_heading1 >= 3;
+SELECT column_heading1, column_heading3 FROM table_heading;
+SELECT * FROM pets ORDER BY column_heading1 ASC;
+SELECT * FROM pets ORDER BY column_heading1 DSC;
+```
+
+##### Reading modes
 ```
 .mode tabs
 .mode ascii
@@ -74,7 +85,7 @@ SELECT * FROM table_heading;
 .mode list
 ```
 
-##### DELETE TABLE
+##### Delete table
 ```
 DROP TABLE table_heading;
 ```
