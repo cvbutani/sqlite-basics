@@ -99,3 +99,5 @@ DELETE FROM table_heading WHERE _id = <id_you_want_to_delete>;
 ```
 DROP TABLE table_heading;
 ```
+
+FOR MORE INFORMATION [CLICK HERE](https://d17h27t6h515a5.cloudfront.net/topher/2016/September/57ed880e_sql-sqlite-commands-cheat-sheet/sql-sqlite-commands-cheat-sheet.pdf)
